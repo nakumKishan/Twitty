@@ -10,6 +10,9 @@ import UIKit
 
 class FollowersButtonCell: UITableViewCell {
 
+    /* ==========================================================================
+     // MARK: Overrides + instantiation
+     ========================================================================== */
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

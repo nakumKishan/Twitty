@@ -74,6 +74,7 @@ class LoginViewController: UIViewController {
      ========================================================================== */
     func checkForTwitterUser(){
         let client = TWTRAPIClient.withCurrentUser()
+    
         if let _ = client.userID{
             DispatchQueue.main.async {
                 self.loginButtonContainerView.isHidden = true

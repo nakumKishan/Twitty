@@ -10,7 +10,14 @@ import UIKit
 
 class HeaderTableViewCell: UITableViewCell {
 
+    /* ==========================================================================
+     // MARK: IBOutlets
+     ========================================================================== */
     @IBOutlet weak var headerLabel: UILabel!
+    
+    /* ==========================================================================
+     // MARK: Overrides + instantiation
+     ========================================================================== */
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

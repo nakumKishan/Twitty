@@ -10,10 +10,16 @@ import UIKit
 
 class FriendsDataCell: UITableViewCell {
     
+    /* ==========================================================================
+     // MARK: IBOutlets
+     ========================================================================== */
     @IBOutlet weak var imgUser: UIImageView?
     @IBOutlet weak var lblUserName: UILabel!
     @IBOutlet weak var lblScreenName: UILabel!
 
+    /* ==========================================================================
+     // MARK: Internal variables
+     ========================================================================== */
     var index = 0
     var controller : FriendsViewController!
     var follower : TwitterUser!{
@@ -28,6 +34,10 @@ class FriendsDataCell: UITableViewCell {
             imgUser?.addGestureRecognizer(tapGestureRecognizer)
         }
     }
+    
+    /* ==========================================================================
+     // MARK: Overrides + instantiation
+     ========================================================================== */
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -39,9 +49,11 @@ class FriendsDataCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    /* ==========================================================================
+     // MARK: Custom initialization + setup methods
+     ========================================================================== */
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
-        
         let imageView = tapGestureRecognizer.view as! UIImageView
         let userObject = controller.followers[imageView.tag]
         let newImageView = UIImageView()
@@ -63,9 +75,15 @@ class FriendsDataCell: UITableViewCell {
 
 class LoadDataCell: UITableViewCell {
     
+    /* ==========================================================================
+     // MARK: IBOutlets
+     ========================================================================== */
    @IBOutlet weak var loader: UIActivityIndicatorView!
    @IBOutlet weak var btnLoadMore: UIButton!
 
+    /* ==========================================================================
+     // MARK: Overrides + instantiation
+     ========================================================================== */
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
