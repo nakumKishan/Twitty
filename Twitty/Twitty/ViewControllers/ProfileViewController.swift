@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import TwitterKit
+import TwitterCore
 
 class ProfileViewController: UIViewController {
 
@@ -54,4 +56,22 @@ class ProfileViewController: UIViewController {
             Helper.showAlert(noInternetMessage, title: noInternetTitle, controller: self)
         }
     }
+    
+    @IBAction func logoutButtonClicked(_ sender: Any) {
+        let client = TWTRAPIClient.withCurrentUser()
+        if let _ = client.userID{
+            TWTRTwitter.sharedInstance().sessionStore.logOutUserID(client.userID!)
+            let loader = UIActivityIndicatorView.init(activityIndicatorStyle: .gray)
+            loader.center = self.view.center;
+            loader.hidesWhenStopped = true
+            self.view.addSubview(loader)
+            loader.startAnimating()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }else{
+            Helper.showAlert("Error getting log Out", title: "Invalid User Id", controller: self)
+        }
+    }
+    
 }

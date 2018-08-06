@@ -217,12 +217,27 @@
                                     <action selector="buttonClicked:" destination="jht-rh-GGZ" eventType="touchUpInside" id="5zo-XM-RRE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7d-xX-uW3">
+                                <rect key="frame" x="137" y="435" width="100" height="35"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.29411764709999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="LfH-cQ-s1R"/>
+                                    <constraint firstAttribute="height" constant="35" id="aXj-yR-Llb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutButtonClicked:" destination="jht-rh-GGZ" eventType="touchUpInside" id="mrY-cb-kMj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qZc-Bj-MGj" firstAttribute="leading" secondItem="LVb-pe-aEq" secondAttribute="leading" constant="20" id="1MX-Oj-1hI"/>
                             <constraint firstItem="DZC-7F-nBU" firstAttribute="leading" secondItem="gZd-U7-lc5" secondAttribute="leading" id="1yd-0q-uWG"/>
                             <constraint firstItem="gZd-U7-lc5" firstAttribute="top" secondItem="qZc-Bj-MGj" secondAttribute="bottom" constant="20" id="A7C-T0-pfZ"/>
+                            <constraint firstItem="u7d-xX-uW3" firstAttribute="top" secondItem="mYq-rz-fi2" secondAttribute="bottom" constant="33" id="Eeg-Pi-RO2"/>
                             <constraint firstItem="DZC-7F-nBU" firstAttribute="top" secondItem="gZd-U7-lc5" secondAttribute="bottom" constant="20" id="QuX-zX-osr"/>
                             <constraint firstItem="qZc-Bj-MGj" firstAttribute="top" secondItem="SZG-FF-PaT" secondAttribute="bottom" id="XWS-Xr-Hu3"/>
                             <constraint firstItem="LVb-pe-aEq" firstAttribute="trailing" secondItem="oqn-Ll-8lZ" secondAttribute="trailing" constant="15" id="c47-VN-KAj"/>
@@ -230,6 +245,7 @@
                             <constraint firstItem="mYq-rz-fi2" firstAttribute="top" secondItem="AS8-df-TCk" secondAttribute="bottom" constant="25.5" id="meE-BJ-orL"/>
                             <constraint firstItem="AS8-df-TCk" firstAttribute="leading" secondItem="DZC-7F-nBU" secondAttribute="leading" id="mnp-Fl-szX"/>
                             <constraint firstItem="SZG-FF-PaT" firstAttribute="leading" secondItem="LVb-pe-aEq" secondAttribute="leading" id="q0F-gh-mEg"/>
+                            <constraint firstItem="u7d-xX-uW3" firstAttribute="centerX" secondItem="qTx-Ei-R6b" secondAttribute="centerX" id="rYT-8g-FXE"/>
                             <constraint firstItem="SZG-FF-PaT" firstAttribute="top" secondItem="LVb-pe-aEq" secondAttribute="top" constant="6" id="rkr-3C-L6D"/>
                             <constraint firstItem="AS8-df-TCk" firstAttribute="top" secondItem="DZC-7F-nBU" secondAttribute="bottom" constant="20" id="s5I-EB-rLz"/>
                             <constraint firstItem="gZd-U7-lc5" firstAttribute="leading" secondItem="LVb-pe-aEq" secondAttribute="leading" constant="20" id="tG3-PR-3zF"/>
